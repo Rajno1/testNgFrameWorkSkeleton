@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <listeners>
+        <listener class-name="com.issi.listeners.Listener"></listener>
+    </listeners>
+       <test verbose="1" preserve-order="true" name="D:/Raj Projects/FrameWorkSkeletons/src/test/java/com/issi/tests/LoginPageTest.java">
+        <classes>
+
+            <class name="com.issi.tests.HomePageTest"></class>
+        </classes>
+    </test>
+</suite>
