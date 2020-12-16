@@ -4,7 +4,7 @@ import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 import com.issi.Driver.Driver;
-import com.issi.pageFactory.HomePage;
+import com.issi.pageFactory.CustomresModule;
 import com.issi.pageFactory.LoginPage;
 import com.issi.utilities.ExcelUtilities;
 import com.issi.utilities.GenericMethods;
@@ -26,7 +26,7 @@ public class BaseClass extends GenericMethods{
 
     //Objects of PageFactory
     public static LoginPage logpg;
-    public static HomePage hmpg;
+    public static CustomresModule cm;
 
     @BeforeClass
     public void setupBrowser(){

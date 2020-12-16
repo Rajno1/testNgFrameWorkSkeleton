@@ -1,7 +1,43 @@
-TESTNG WITH EXTENTREPORT V5
-1. Create a maven project and update POM.XML file with following dependencies
-    * Selenium-Java (3.141.59 v)
-    * TestNG (6.14.3 v)
-    * extentreports (5.0.5 v)
-    * org.apache.commons.io (2.4 v)
-2. under src/main/java
+*** Data Driven Hybrid framework with TestNG & Extent report using POM Pattern ***
+
+* This is a Maven based framework
+* pom.xml should have everything you need to create and run the test.
+  Please add further dependencies if you require.
+
+ The following folder src/main/java contains the following packages and classes
+
+ 'Base' pack contains - BaseClass, this contains common object variables and
+  methods to launch and kills the browser and Login and logout to your application
+
+ 'constants' pack contains - FrameworkConstants class, this contains all constants
+  and their getter and setter methods ,which we use in our framework
+
+  'Driver' pack contains - Driver class , here we wrote the code for the actions that
+  we are performing in BaseClass (launching and kills the browser and Login , logout)
+
+  'Listeners' under this pack we have -Listeners Class this contains default action
+  method that are going to perform before and after every test execution
+
+  'PageFactory' in this pack we will create classes store pageobjects for each page
+  in our application
+
+  'report' pack contains 'Extent Report' class tha has a reusable method to
+  initiate the report.
+
+  and finally in 'utilities' pack we have classes for excel utilities and generic methods
+
+  under src/main/resources we have config file of extent report
+
+
+  src/test/java contains tests package where we will create classes to write out
+  test scripts.
+
+  src/test/resources DriverExecutables (to store browser drivers ) & TestData folders
+
+  in 'TestOutput' folder we have our reports generated.
+
+  Tips:
+  use testng.xml file to execute your script
+
+                                                                 Rajasekhar.M
+                                                            ***** Thank you *****

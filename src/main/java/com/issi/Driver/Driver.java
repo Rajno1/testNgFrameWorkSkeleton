@@ -2,10 +2,8 @@ package com.issi.Driver;
 
 import com.issi.Base.BaseClass;
 import com.issi.constants.FrameworkConstants;
-import com.issi.pageFactory.HomePage;
+import com.issi.pageFactory.CustomresModule;
 import com.issi.pageFactory.LoginPage;
-import com.issi.utilities.GenericMethods;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
@@ -16,7 +14,7 @@ import java.text.MessageFormat;
 import java.util.Objects;
 import java.util.concurrent.TimeUnit;
 
-import static com.issi.pageFactory.HomePage.click_onLogout;
+import static com.issi.pageFactory.CustomresModule.click_onLogout;
 import static com.issi.pageFactory.LoginPage.*;
 
 
@@ -73,7 +71,7 @@ public class Driver extends BaseClass {
 
     }
     public static void initLogOut(){
-        hmpg = new HomePage(driver);
+        cm = new CustomresModule(driver);
         click_onLogout();
 
     }

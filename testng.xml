@@ -7,7 +7,7 @@
        <test verbose="1" preserve-order="true" name="D:/Raj Projects/FrameWorkSkeletons/src/test/java/com/issi/tests/LoginPageTest.java">
         <classes>
 
-            <class name="com.issi.tests.HomePageTest"></class>
+            <class name="com.issi.tests.CustomersModuleTest"></class>
         </classes>
     </test>
 </suite>
