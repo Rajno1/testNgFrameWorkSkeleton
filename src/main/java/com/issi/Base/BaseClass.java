@@ -6,6 +6,7 @@ import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 import com.issi.Driver.Driver;
 import com.issi.pageFactory.CustomresModule;
 import com.issi.pageFactory.LoginPage;
+import com.issi.report.SendEmailWithAttachment;
 import com.issi.utilities.ExcelUtilities;
 import com.issi.utilities.GenericMethods;
 import org.openqa.selenium.WebDriver;
@@ -22,6 +23,7 @@ public class BaseClass extends GenericMethods{
     public static WebDriver driver;
     public static ExcelUtilities excel;
     public static ExtentTest test;
+    public static SendEmailWithAttachment sendMail;
 
 
     //Objects of PageFactory

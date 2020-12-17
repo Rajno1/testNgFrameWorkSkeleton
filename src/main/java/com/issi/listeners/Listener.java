@@ -7,6 +7,7 @@ import com.aventstack.extentreports.markuputils.MarkupHelper;
 import com.issi.Base.BaseClass;
 import com.issi.constants.FrameworkConstants;
 import com.issi.report.ExtentReport;
+import com.issi.report.SendEmailWithAttachment;
 import org.apache.commons.io.FileUtils;
 import org.apache.commons.io.IOUtils;
 import org.openqa.selenium.OutputType;
@@ -101,6 +102,7 @@ public class Listener extends BaseClass implements ITestListener {
         try {
             extent.flush();
             Desktop.getDesktop().browse(new File(FrameworkConstants.getExtentSparkOutputPath()).toURI());
+            SendEmailWithAttachment.mailTheReport();
         } catch (IOException e) {
             e.printStackTrace();
         }
