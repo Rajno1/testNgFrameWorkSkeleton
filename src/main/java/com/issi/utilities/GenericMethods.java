@@ -9,6 +9,7 @@ import org.testng.Assert;
 import java.io.File;
 import java.io.IOException;
 import java.util.List;
+import java.util.Set;
 import java.util.concurrent.TimeUnit;
 
 public class GenericMethods {
@@ -283,7 +284,26 @@ public class GenericMethods {
 
     }
 
-    // Action class methods
+    /**
+     * Windows /tabs handling
+     * When you call this method you should pass driver instance &
+     * parevious windowid (which you will store as a string) as arguments
+     * and this method will also capture and will return's the current window id
+     * @param driver - This is driver object
+     * @param previoswindowId - previous windowid
+     * @return - it will return current window id as well
+     */
+    public static String switchToWindow(WebDriver driver,String previoswindowId) {
+
+        Set<String> windowHandles = driver.getWindowHandles();
+        for(String windowHandle : windowHandles) {
+            if (!previoswindowId.equals(windowHandle)) {
+                driver.switchTo().window(windowHandle);
+            }
+        }
+        String currenWindow = driver.getWindowHandle();
+        return currenWindow;
+    }
 
 
 
