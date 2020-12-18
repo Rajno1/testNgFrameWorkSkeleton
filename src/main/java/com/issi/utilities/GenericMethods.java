@@ -2,6 +2,7 @@ package com.issi.utilities;
 
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.*;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
@@ -303,6 +304,74 @@ public class GenericMethods {
         }
         String currenWindow = driver.getWindowHandle();
         return currenWindow;
+    }
+
+
+    // Generic methods for action class
+
+    /**
+     * In Actions class we have two imp methods that we use most of the time
+     * 'build()'- will create a chain of actions
+     * 'perform()' - method will execute an action on chain created.
+     *
+     */
+    public static void doubleClick(WebDriver driver,WebElement targetElement) {
+        try {
+            Actions action = new Actions(driver);
+            action.doubleClick(targetElement).perform();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+
+    /**
+     * This method will perform right click action on element, that you will pass as argument
+     * @param driver - driver object
+     * @param element - target element on which you want to perfrom right click.
+     */
+    public static void rightClick(WebDriver driver,WebElement targetElement) {
+        try {
+            Actions action = new Actions(driver);
+            action.contextClick(targetElement).perform();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+
+
+    /**
+     * This method will perform mouse over operation on target element
+     * @param driver - driver object
+     * @param targetElement - the element that you want to mouse over on
+     */
+    public static void mouseOver(WebDriver driver, WebElement targetElement) {
+
+        try {
+            Actions action = new Actions(driver);
+            action.moveToElement(targetElement).perform();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+    }
+
+    /**
+     * you can do drag and drop using this method
+     * @param driver - driver object
+     * @param sourceEle - element that you to drag
+     * @param targetEle - destination element, that you want to place the dragged element
+     */
+    public static void doDragAndDrop(WebDriver driver, WebElement sourceEle, WebElement targetEle) {
+
+        try {
+            Actions action = new Actions(driver);
+            action.dragAndDrop(sourceEle, targetEle).build().perform();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
     }
 
 
